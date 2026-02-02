@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Success Predictor</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f7f7f7; text-align: center; padding: 50px; }
+        h1 { color: #333; }
+        form { background: #fff; display: inline-block; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, select { margin: 10px 0; padding: 10px; width: 200px; border-radius: 5px; border: 1px solid #ccc; }
+        input[type="submit"] { background-color: #4CAF50; color: white; width: 220px; cursor: pointer; border: none; }
+        input[type="submit"]:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Course Success Predictor</h1>
+    <form action="/predict" method="post">
+        <input type="number" step="0.1" name="rating" placeholder="Rating (e.g., 4.5)" required><br>
+        <input type="number" name="learners" placeholder="Learners (e.g., 1500)" required><br>
+        <input type="number" step="0.1" name="duration" placeholder="Duration (months)" required><br>
+        <select name="is_paid" required>
+            <option value="">Is Paid?</option>
+            <option value="1">Paid</option>
+            <option value="0">Free</option>
+        </select><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

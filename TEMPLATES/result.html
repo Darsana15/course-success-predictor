@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f7f7f7; }
+        h1 { color: #333; }
+        .success { color: green; font-size: 24px; }
+        .fail { color: red; font-size: 24px; }
+        a { display: inline-block; margin-top: 20px; text-decoration: none; color: #fff; background-color: #4CAF50; padding: 10px 20px; border-radius: 5px; }
+        a:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+
+    <p>Random Forest Prediction: 
+        <span class="{{ 'success' if rf_pred==1 else 'fail' }}">
+            {{ 'Success' if rf_pred==1 else 'Fail' }}
+        </span>
+    </p>
+    
+    <p>XGBoost Prediction: 
+        <span class="{{ 'success' if xgb_pred==1 else 'fail' }}">
+            {{ 'Success' if xgb_pred==1 else 'Fail' }}
+        </span>
+    </p>
+
+    <a href="/">Predict Another Course</a>
+</body>
+</html>
+
+
